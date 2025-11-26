@@ -13,12 +13,12 @@ export default defineGkdApp({
       activityIds: ['.plugin.appbrand.ui.AppBrandUI00'],
       rules: [
         {
-          quickFind: true， // <-- 修正 quickFind 位置
-          // 匹配 [立即签到] 或 [点击签到] 或 [点击打卡]，并限制为按钮
+          quickFind: true, // <-- 修正 quickFind 位置
+          // 匹配 [立即签到] 或 [点击签到] 或 [点击打卡],并限制为按钮
           matches:
             '[name="android.widget.Button"][text="立即签到"], [name="android.widget.Button"][text="点击签到"], [name="android.widget.Button"][text="点击打卡"]',
         },
-      ]，
+      ],
     },
     // 2. 小程序辅助界面签到/打卡整合
     {
@@ -29,11 +29,11 @@ export default defineGkdApp({
       activityIds: ['.plugin.appbrand.ui.AppBrandUI01'],
       rules: [
         {
-          quickFind: true， // <-- 修正 quickFind 位置
+          quickFind: true, // <-- 修正 quickFind 位置
           matches:
-            '[name="android.widget.Button"][text="立即签到"], [name="android.widget.Button"][text="点击打卡"]'，
+            '[name="android.widget.Button"][text="立即签到"], [name="android.widget.Button"][text="点击打卡"]',
         },
-      ]，
+      ],
     },
     // 3. 微信内置网页签到整合
     {
@@ -44,11 +44,11 @@ export default defineGkdApp({
       activityIds: ['.plugin.webview.ui.tools.MMWebViewUI'],
       rules: [
         {
-          quickFind: true， // <-- 修正 quickFind 位置
-          // 通常网页按钮的 name 是 android.widget.Button 或 android.view.View，这里只依赖 text
-          matches: '[text="立即签到"]， [text="点击签到"]',
+          quickFind: true, // <-- 修正 quickFind 位置
+          // 通常网页按钮的 name 是 android.widget.Button 或 android.view.View,这里只依赖 text
+          matches: '[text="立即签到"], [text="点击签到"]',
         },
       ],
     },
-  ]，
+  ],
 });
