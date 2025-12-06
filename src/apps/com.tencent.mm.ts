@@ -52,7 +52,6 @@ export default defineGkdApp({
       name: '内置网页签到',
       desc: '合并 MMWebViewUI 中的签到按钮',
       enable: true,
-       enableTime: '1900-2100',
       activityIds: ['.plugin.webview.ui.tools.MMWebViewUI'],
       rules: [
         // 修正：拆分 matches 属性为多个规则对象
